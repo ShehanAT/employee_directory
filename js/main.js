@@ -1,28 +1,4 @@
 $(document).ready(function(){
-    /*$(function(){
-        $('a[rel=lightbox').lightBox({
-            containerResizeSpeed: 250,
-            fixedNavigation: true
-        });
-        $('a[rel=2ndlightbox').lightBox({
-            overlayBgColor: '#fff',
-            overlayOpacity: 0.7
-        });
-    });
-    $(function() {
-        $('a[@rel*=lightbox]').lightBox({
-         overlayBgColor: '#fff',
-         overlayOpacity: 0.6,
-             fixedNavigation: false,
-         imageLoading: 'images/loading.gif',
-         imageBtnClose: 'images/close.gif',
-         imageBtnPrev: 'images/prev.gif',
-         imageBtnNext: 'images/next.gif',
-         containerResizeSpeed: 350,
-         txtImage: 'Imagem',
-         txtOf: 'de'
-        });
-     });*/
      $('#close-modal-btn').hide();
         $.ajax({
             url: 'https://randomuser.me/api/?results=12',
@@ -102,28 +78,7 @@ $(document).ready(function(){
                    }
             });
                
-               /*
-               for (var i = 0 ; i < 12; i+=3){
-                   $('<div class="col-md-3">').insertBefore("#"+i)
-                   //$('</div>').after("#"+i+3)
-               }
-               for (var i = 0 ; i < 12; i+=3){
-                   var col= i/3
-                   $('.col-md-3')[col].append($('.box')[i]);
-                   $('.col-md-3')[col].append($('.box')[i+1]);
-                   $('.col-md-3')[col].append($('.box')[i+2]);
-               }
-               */
-            /*    
-            $('.box').on('mouseover', (event) => {
-                $(event.currentTarget).css('background-color','green');
-                //event.target.parentElement.parentElement.style.background = 'green';
-            });
-            $('.box').on('mouseout', (event) => {
-                $(event.currentTarget).css('background-color','');
-                //event.target.parentElement.parentElement.style.backgroundColor = '';
-            });
-            */
+               
                 } ,
             error: function(data){
                 console.log(data);
