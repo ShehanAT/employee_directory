@@ -1,5 +1,8 @@
 $(document).ready(function(){
+<<<<<<< HEAD
     
+=======
+>>>>>>> 40e2e6553561c1590e4b5f7616437e09ded0c9e5
      $('#close-modal-btn').hide();
         $.ajax({
             url: 'https://randomuser.me/api/?results=12',
@@ -155,6 +158,7 @@ $(document).ready(function(){
                        $(event.currentTarget).css('background-color','white');
                    }
             });
+<<<<<<< HEAD
             $('.fa').on('click', function(event){
                 if (event.target.id == 'left'){            
                     var currentIndex = $('.modal-container section').attr('id');
@@ -167,6 +171,10 @@ $(document).ready(function(){
                 removePrevious();
                 
             });
+=======
+               
+               
+>>>>>>> 40e2e6553561c1590e4b5f7616437e09ded0c9e5
                 } ,
             error: function(data){
                 console.log(data);
