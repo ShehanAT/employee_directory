@@ -7,18 +7,18 @@ $(document).ready(function(){
             success: function(data){
                 function expandModal(id, type){//function that shows the in depth employee information in a modal and/or shows the next employee when the arrow buttons are clicked
                     $(".searchPlayer").hide();
-                    $("ul").css('pointer-events','none');
+                    $("ul").css('pointer-events','none');//makes the full page clickable 
                     $('#'+id).css('background-color','white');
                     if (type == 'nav'){//differentiate when the user clicks on the arrow navigation buttons
                         if(id !== '1' || id !== '11'){
                             $('.fa-chevron-left').show();
                             $('.fa-chevron-right').show();
                         }
-                        if (id == '0'){
+                        if (id == '0'){//if at the beginning of the employees hide the left arrow button 
                             $('.fa-chevron-left').hide();
                         }
                         if (id == '11'){
-                            $('.fa-chevron-right').hide();
+                            $('.fa-chevron-right').hide();//if at the end of the employees hide the right arrow button 
                         }
                         
                         $('.modal-container').append($($('#'+id)[0]).clone()[0]);
@@ -71,7 +71,7 @@ $(document).ready(function(){
                     var cell_number = data.results[i]['cell'].replace(/['"]+/g, '');
                     var email = "Email: " + data.results[i]['email'];
             
-                    var profilepic = data.results[i]['picture']['large'];
+                    var profilepic = data.results[i]['picture']['large'];//saving the large profile pic of each employee inside a variable
                     console.log(data);
                     var address = "Address:" + data.results[i]['location']['street']+ ", " +data.results[i]['location']['city'] + ", " + data.results[i]['location']['state'] + ", " +data.results[i]['nat'] + ", " +"PostCode: " +data.results[i]['location']['postcode'];
                     var dob = ("Date of Birth: " + data.results[i]['dob']).replace(/['"]+/g, '');
@@ -170,7 +170,7 @@ $(document).ready(function(){
             });
                 } ,
             error: function(data){
-                console.log(data);
+                console.log(data);//if error occurs console log the employee data 
             }
         });
        
