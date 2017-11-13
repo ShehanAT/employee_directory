@@ -72,7 +72,8 @@ $(document).ready(function(){
                     var email = "Email: " + data.results[i]['email'];
             
                     var profilepic = data.results[i]['picture']['large'];
-                    var address = "Address:" + data.results[i]['location']['street']+ ", " +data.results[i]['location']['city'] + ", " + data.results[i]['location']['state'] + " " +"PostCode: " +data.results[i]['location']['postcode'];
+                    console.log(data);
+                    var address = "Address:" + data.results[i]['location']['street']+ ", " +data.results[i]['location']['city'] + ", " + data.results[i]['location']['state'] + ", " +data.results[i]['nat'] + ", " +"PostCode: " +data.results[i]['location']['postcode'];
                     var dob = ("Date of Birth: " + data.results[i]['dob']).replace(/['"]+/g, '');
                     $('#clearfix').append('<section class="box" id="'+i+'" style=""><a target="_blank" ><div class="employee" >' +'<p style="font: bold 16px solid">' + fullName +  '</p>' +'\n' + '<p>'+ city + '</p>' + '\n' + '<p>'+ email + '</p>'+'\n' +'<p class="username" >'+ username +'</p>'+ '<p class="cell_number" hidden>Phone Number: '+ cell_number +'</p>'+ '<p class="address" hidden>'+ address +'</p>' + '<p class="dob" hidden>'+ dob +'</p>' +'<img style="border-radius: 70px;" src="'+ profilepic +'"/></div></a></section>');
                     //appending the employee information to the clearfix div

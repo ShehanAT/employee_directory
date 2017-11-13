@@ -16,6 +16,12 @@ body {
 }
 
 .wrapper {
+  margin: auto;
+  width: 50%;
+  height: 100%;
+
+  padding: 10px;
+  text-align: center;
   display: grid;
   grid-template-columns: 200px 200px 200px;
   grid-gap: 10px;
